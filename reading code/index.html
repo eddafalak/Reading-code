@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatDoesThisDo?</title>
+    <!--the title content tag appears in the browsers title bar or tab-->
+  </head>
+  <body>
+    <h1>What does this do?</h1>
+    <!--This is the main heading of the webpage. it is used for the most important heading and typically appears in large, bold text-->
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>level 2</title>
+    <style>
+      .different {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="different">
+      is this different from the h1 in level 1, if so, how is it different?
+    </h1>
+    <!--Yes, its different from a regular h1 because of the CSS applied. CSS rule will apply a red background to the h1 element. It will be displayed with a red background.-->
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>level 2</title>
+    <link rel="stylesheet" href="level3.css" />
+  </head>
+  <body>
+    <h1 class="different">
+      is this different from the h1 in level 2, if so, how is it different?
+    </h1>
+    <!--In this case, the styling of the h1 element with the class different depends on the external css file that is linked in the head section-->
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>level 2</title>
+  </head>
+  <body>
+    <!- -
+        Imagine that we have Tailwind installed in our project.
+        - ->
+    <h1 class="bg-gray-300 text-red-400">
+      is this different from the h1 in level 3, if so, how is it different?
+    </h1>
+    <!--the main difference comes from the specific styles provided by tailwinds utility classes, which are likely different from any custom styles in level3.css-->
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+  </head>
+  <body>
+    <h1 id="greeting"></h1>
+    <script>
+      document.getElementById("greeting").innerHTML = "Hello, world!";
+    </script>
+    <!--the h1 elemnt has an id of greeting, but no initial content. 
+    A script tag is used to run javascript after the page is loaded.
+The script finds the h1 element with the ID greeting using document.getelentbyid(greeting)
+Thenm it sets the innerHTML property of that element to Hello, world, which inserts the text inside the h1-->
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Greeting</title>
+  </head>
+  <body>
+    <h1 id="greeting"></h1>
+
+    <script src="level6.js"></script>
+  </body>
+</html>
+
+let greeting = "Hello, world!"; document.getElementById("greeting").innerHTML =
+greeting;
+
+<!--This time the javascript code resides in the external level6.js file instead of being directly in the HTML document-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Greeting</title>
+  </head>
+  <body>
+    <h1 id="message"></h1>
+
+    <script src="level7.js"></script>
+  </body>
+</html>
+//try to change the value of "number" by erasing 10 and writing a different
+number and observe the different output let number = 10; if (number > 5) {
+document.getElementById("message").innerHTML = "Number is greater than 5"; }
+else { document.getElementById("message").innerHTML = "Number is 5 or less"; }
+<!--1. The variable number is initilized with a value of 10.
+    2. The if statement checks if number is greater than 5:
+if number > 5 (which it is) the script updates the h1 element with the message "number is greater than 5"
+if number <= 5, it updates the message to "number is 5 or less"-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Greeting</title>
+  </head>
+  <body>
+    <h1 id="message"></h1>
+
+    <script src="level8.js"></script>
+  </body>
+</html>
+function greet(name) { document.getElementById("message").innerHTML = "Hello, "
++ name; } greet("John");
+<!--greet(name) takes one argument, name. Inside the function, it selects the h1 with the id=message and updates its innerHTML with the string "hello"
+followed by the value of name
+the function greet ("john") is called, passing "john" as the argument. This resaults in the message "hello John" being displayed in the h1 element
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Greeting</title>
+  </head>
+  <body>
+    <h1 id="numberList"></h1>
+
+    <script src="level9.js"></script>
+  </body>
+</html>
+let numbers = [1, 2, 3, 4, 5]; let listHTML = ""; for (let i = 0; i <
+numbers.length; i++) { listHTML += "
+<li>Number at index " + i + " is " + numbers[i] + "</li>
+"; } document.getElementById("numberList").innerHTML = listHTML;
+
+<!--1. The variable numbers is an array containing 1,2,3,4,5
+    2. the for loop iterates over the numbers array:
+    for each element in the array, the loop generates an HTML list item <li> that includes the index and the value of the number at that index
+    the string listHTML accumulates these <li> items during each iteration of the loop
+    ice the loop completes, the string listHTML contains the generates list items. These items are inserted into the h1 element by setting innerHTML of the element with id=numberlist
+    When the page is loaded, the h1 element will display the following as list items:
+Number at index 0 is 1
+Number at index 1 is 2
+Number at index 2 is 3
+Number at index 3 is 4
+Number at index 4 is 5 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Greeting</title>
+  </head>
+  <body>
+    <h1 id="result"></h1>
+
+    <script src="levels10.js"></script>
+  </body>
+</html>
+
+function add(a, b) { return a + b; } let result = add(5, 10);
+document.getElementById("result").innerHTML = "The result is: " + result;
+
+<!--
+    function definition (add):
+    the add(a,b) function takes two parameters a and b and returns their sum (a+b)
+
+    Calling the function:
+    add (5, 10) is called, passing the values 5 and 10 as arguments.
+    the result of the addition is stored in the variable result (which will be 15)
+
+    Updating the HTML:
+    document.getlementbyid("result").innerHTML = "the result is": " + result; dynamically updates the content of the h1 element with the text "the result is: 15"
+    When the page is loaded he h1 message will be : the result is: 15
+-->
